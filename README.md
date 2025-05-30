@@ -1,0 +1,18 @@
+# "[따라하면서 쉽게 배우는 모던 리액트 완전 입문](< https://product.kyobobook.co.kr/detail/S000214428404> )"을 읽으면서 작성한 코드이다.
+
+저자 깃허브 : [https://github.com/wikibook/modern-react/](< https://github.com/wikibook/modern-react/ >)
+
+코딩 입문서에는  
+
+    1. 입문자를 위한 책(순수한 의미의 입문서)
+    2. 어느정도 지식이 있는 사람을 대상으로 한 백과사전식 책
+    3. 활용법을 다룬 책  
+
+이렇게 세가지 부류가 있다고 생각한다.  
+
+제목만 보고 <1>하고 <2>가 섞여 있는 책(예: 프로그래밍 러스트, 자바스크립트 완벽 가이드)을 바라고 구입했지만 <3>이 중심이고 <1>이 섞여있는 책이다.
+
+파이썬이나 C, 러스트, Go, 자바스크립트를 학습하면서 사실상 터미널(+SSH)만 보고 있었다.  
+드디어 다른 방향으로 실행 결과를 관측할 수 있을 것 같다.  
+
+[Create React App 사용을 권장하지 않아서](< https://react.dev/blog/2025/02/14/sunsetting-create-react-app >) [Vite](< https://ko.vite.dev/ >)를 대신 사용했다.
