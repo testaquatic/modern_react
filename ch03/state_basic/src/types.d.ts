@@ -1,0 +1,3 @@
+type StateInit = {
+    init: number;
+}
