@@ -15,4 +15,6 @@
 파이썬이나 C, 러스트, Go, 자바스크립트를 학습하면서 사실상 터미널(+SSH)만 보고 있었다.  
 드디어 다른 방향으로 실행 결과를 관측할 수 있을 것 같다.  
 
-[Create React App 사용을 권장하지 않아서](< https://react.dev/blog/2025/02/14/sunsetting-create-react-app >) [Vite](< https://ko.vite.dev/ >)를 대신 사용했다.
+[Create React App 사용을 권장하지 않아서](< https://react.dev/blog/2025/02/14/sunsetting-create-react-app >) [Vite](< https://ko.vite.dev/ >)를 대신 사용했다.  
+타입스크립트를 같이 익히고 있어서 타입스크립트로 작성했다.  
+이 책의 후반부에 타입스크립트와 관련한 부분이 나오는데 지금 작성하는 것이 맞는 방향인지 읽으면서 확인할 생각이다.
