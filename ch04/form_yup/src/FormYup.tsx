@@ -2,11 +2,40 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, type FieldErrors } from "react-hook-form";
 import * as yup from "yup";
 
+yup.addMethod(yup.string, "ng", function () {
+    return this.test(
+        "ng",
+        ({ label }) => `${label}에 적절하지 않은 단어가 포함되어 있습니다.`,
+        (value) => {
+            if (!value) {
+                return false;
+            }
+            const ngs = ["폭력", "죽음", "그로테스크"];
+            for (const ng of ngs) {
+                if (value.includes(ng)) {
+                    return false;
+                }
+            }
+            return true;
+        })
+});
+
+declare module "yup" {
+    interface StringSchema {
+        ng(): StringSchema;
+    }
+}
+
 const scheme = yup.object({
-    name: yup.string().label("이름").required("${lable}은 필수 입력입니다.").max(20, "${label}은 ${max}자 이내로 입력하세요."),
+    name: yup.string().label("이름").trim().lowercase().required("${lable}은 필수 입력입니다.").max(20, "${label}은 ${max}자 이내로 입력하세요."),
     gender: yup.string().label("성별").required("${label}은 필수 입력입니다."),
     email: yup.string().label("이메일").required("${label}은 필수 입력입니다.").email("${label}의 형식이 올바르지 않습니다."),
-    memo: yup.string().label("메모").required("${label}은 필수 입력입니다.").min(10, "${label}은 ${min}자 이상으로 입력하세요."),
+    memo: yup
+        .string()
+        .label("메모")
+        .required("${label}은 필수 입력입니다.")
+        .min(10, "${label}은 ${min}자 이상으로 입력하세요.")
+        .ng(),
 });
 
 type FormValue = {
@@ -27,7 +56,7 @@ export function FormYup() {
         resolver: yupResolver(scheme),
     });
 
-    const onsubmit = (data: FormValue) => console.log(data);
+    const onsubmit = (data: { [x: string]: unknown; }) => console.log(data);
     const onerror = (error: FieldErrors<FormValue>) => console.log(error);
 
     return (
