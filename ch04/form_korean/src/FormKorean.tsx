@@ -1,6 +1,5 @@
-import type { ObjectSchema } from "yup";
 import yup from "./yup.kr";
-import { useState, type JSX } from "react";
+import { type JSX } from "react";
 import {
     useForm,
     type SubmitErrorHandler,
