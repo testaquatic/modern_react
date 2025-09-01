@@ -1,6 +1,7 @@
 import { FormBasic } from "./FormBasic";
 import { FormKorean } from "./FormKorean";
 import { FormYup } from "./FormYup";
+import { ProfilerBasic } from "./ProfilerBasic";
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <FormBasic />
       <FormYup />
       <FormKorean />
+      <ProfilerBasic />
     </>
   );
 }
