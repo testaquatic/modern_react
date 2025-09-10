@@ -1,10 +1,10 @@
 import { RouterProvider } from "react-router-dom";
-import routesBasic from "./routesBasic";
+import routesLink from "./routesLink";
 
 
 function App() {
   return (
-    <RouterProvider router={routesBasic} />
+    <RouterProvider router={routesLink} />
   );
 }
 
